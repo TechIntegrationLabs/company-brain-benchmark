@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Company Brain Benchmark — Methodology + Honest Scoring</title>
+  <meta name="description" content="An open methodology for evaluating company-brain products on freshness, audience-safety, portability, and operational provenance. MIT licensed.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Company Brain Benchmark">
+  <meta property="og:description" content="Open methodology for evaluating company-brain products on the dimensions search benchmarks miss.">
+  <meta property="og:url" content="https://companybrain.report">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Company Brain Benchmark">
+  <meta name="twitter:description" content="Open methodology + honest scoring of Glean, Notion, Microsoft, Hebbia, Letta/Mem0/Zep, and BizBrain OS.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <span class="brand">The Company Brain Benchmark <span class="version">v2026.04</span></span>
+      <a href="#methodology" class="nav-link">Methodology</a>
+      <a href="#scoring" class="nav-link">Scoring</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="https://github.com/TechIntegrationLabs/brain-skill-bundle" class="nav-link primary">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker">An open methodology · MIT · Disagreement on a score → file an issue</p>
+      <h1>Most "company brain" products are evaluated on retrieval quality.<br><span class="dim">That's a search benchmark.</span></h1>
+      <p class="tagline">A company brain is the substrate for reliable AI <em>automation</em>, not just AI <em>retrieval</em>. The right benchmark measures four things search benchmarks miss.</p>
+    </section>
+
+    <section id="methodology" class="content">
+      <h2>The four dimensions</h2>
+
+      <div class="dimensions">
+        <article class="dim-card">
+          <h3><span class="num">01</span> Freshness</h3>
+          <p>When the policy changed yesterday, how long until the brain reflects it? Measured in hours, not weeks.</p>
+          <p class="why"><strong>Why:</strong> Stale knowledge is the most expensive failure mode in production — the agent confidently doing the wrong thing.</p>
+        </article>
+
+        <article class="dim-card">
+          <h3><span class="num">02</span> Audience-safety</h3>
+          <p>Can the brain enforce that operator-only knowledge cannot ever load into a customer-facing agent session?</p>
+          <p class="why"><strong>Why:</strong> Required for regulated industries, managed-services operators, and any business with material asymmetry between operator and customer knowledge.</p>
+        </article>
+
+        <article class="dim-card">
+          <h3><span class="num">03</span> Portability</h3>
+          <p>Can the same brain output run on Claude Code, Cursor, Codex, OpenAI Agents SDK, Lindy, Devin? Or is it locked to one runtime?</p>
+          <p class="why"><strong>Why:</strong> Vendor lock-in is the buyer's #1 fear in 2026. Skill-file artifacts are the answer.</p>
+        </article>
+
+        <article class="dim-card">
+          <h3><span class="num">04</span> Operational provenance</h3>
+          <p>When the agent cites a fact, can it point to the email thread, Slack channel, or meeting that produced it?</p>
+          <p class="why"><strong>Why:</strong> Required to debug hallucinations, re-validate sources, and pass an audit.</p>
+        </article>
+      </div>
+
+      <p class="micro">Each dimension scored 0–5 with concrete criteria. Full rubric: <a href="https://github.com/TechIntegrationLabs/brain-skill-bundle/blob/main/DIMENSIONS.md">DIMENSIONS.md</a>.</p>
+    </section>
+
+    <section id="scoring" class="content alt">
+      <h2>Scoring</h2>
+      <p class="lead">Six products. Public docs and engineering blogs as primary sources. Honest scoring including dimensions where each loses.</p>
+
+      <div class="table-wrap">
+        <table class="scoring-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Freshness</th>
+              <th>Audience-safety</th>
+              <th>Portability</th>
+              <th>Provenance</th>
+              <th>Total /20</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="self">
+              <td><strong>BizBrain OS</strong></td>
+              <td>4</td>
+              <td>5</td>
+              <td>4</td>
+              <td>4</td>
+              <td><strong>17</strong></td>
+            </tr>
+            <tr>
+              <td>Microsoft Copilot</td>
+              <td>4</td>
+              <td>4</td>
+              <td>0</td>
+              <td>4</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Glean</td>
+              <td>3</td>
+              <td>3</td>
+              <td>1</td>
+              <td>4</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>Hebbia</td>
+              <td>2</td>
+              <td>3</td>
+              <td>0</td>
+              <td>5</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Letta / Mem0 / Zep</td>
+              <td>4</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Notion AI</td>
+              <td>3</td>
+              <td>2</td>
+              <td>0</td>
+              <td>3</td>
+              <td>8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="micro">Per-product rationale: <a href="https://github.com/TechIntegrationLabs/company-brain-benchmark/blob/main/scoring/glean.md">Glean</a> · <a href="https://github.com/TechIntegrationLabs/company-brain-benchmark/blob/main/scoring/microsoft-copilot.md">Microsoft</a> · <a href="https://github.com/TechIntegrationLabs/company-brain-benchmark/blob/main/scoring/notion-ai.md">Notion AI</a> · <a href="https://github.com/TechIntegrationLabs/company-brain-benchmark/blob/main/scoring/hebbia.md">Hebbia</a> · <a href="https://github.com/TechIntegrationLabs/company-brain-benchmark/blob/main/scoring/memory-libraries.md">Letta/Mem0/Zep</a> · <a href="https://github.com/TechIntegrationLabs/company-brain-benchmark/blob/main/scoring/bizbrain-os.md">BizBrain OS</a></p>
+
+      <h3>What we deliberately don't score on</h3>
+      <ul class="caveat-list">
+        <li><strong>Raw retrieval quality.</strong> Covered by RAG benchmarks elsewhere.</li>
+        <li><strong>Distribution to F500.</strong> A popularity contest, not an evaluation. BizBrain OS would lose.</li>
+        <li><strong>Ecosystem maturity.</strong> Glean, Microsoft, Notion all win. Different question.</li>
+        <li><strong>Pricing.</strong> Listed in the per-product files where public; not used for scoring.</li>
+      </ul>
+
+      <p class="callout">If you need to find the document where the policy is written, use Glean. If you need an agent to <em>do the work the way your specific company does it</em>, that's what this benchmark measures.</p>
+    </section>
+
+    <section id="example" class="content">
+      <h2>What "high portability + audience-safety" looks like</h2>
+      <p>Below: a real <code>brain-skill-bundle</code> file emitted by BizBrain OS for one client's refund policy. Strict superset of Anthropic Agent Skills — every parser that reads <code>SKILL.md</code> reads this. Parsers that speak the extension also enforce tenant + audience + provenance + validity.</p>
+
+      <pre><code>---
+name: refund-handling
+description: How customer refunds are processed at Acme Corp's support team
+allowed-tools: ["mcp__crm__*", "mcp__email__*", "mcp__stripe__*"]
+
+brain-skill-bundle:
+  spec_version: "0.1.0"
+  tenant:
+    id: "acme-corp"
+    display_name: "Acme Corp"
+  audience: client_safe
+  provenance:
+    sources:
+      - { type: gmail, thread_ids: ["thread-2026-03-12-policy-update"] }
+      - { type: slack, channel_ids: ["C0123CSTSUPPORT"], message_count: 84 }
+      - { type: drive, file_ids: ["1aBcDeFgHiJk"] }
+      - { type: meeting, meeting_ids: ["mtg-2026-03-15-policy-review"] }
+    last_updated: "2026-04-25T15:30:00Z"
+  validity:
+    valid_from: "2026-03-15"
+    valid_to: null
+  evolution:
+    schema_version: "0.4.2"
+    confidence: 0.94
+    last_evolved: "2026-04-12T09:18:00Z"
+---
+
+# Refund Handling at Acme Corp
+
+When a customer requests a refund within 30 days of purchase:
+1. Verify the order in the CRM...
+</code></pre>
+
+      <p><a href="https://github.com/TechIntegrationLabs/brain-skill-bundle" class="cta primary">Spec + reference parser + 3 example bundles</a></p>
+    </section>
+
+    <section id="faq" class="content alt">
+      <h2>FAQ</h2>
+
+      <div class="faq">
+        <h3>You scored your own product. Of course it wins.</h3>
+        <p>We scored BizBrain OS on the dimensions we built it for. We deliberately did NOT score on dimensions where we'd lose — raw enterprise-search recall, distribution to F500, partner ecosystem maturity. Those matter and we're behind.</p>
+        <p>Pick the right tool. If you need to find the document where the policy is written, use Glean. If you need an agent to <em>do the work the way your company does it</em>, this benchmark measures the dimensions that matter.</p>
+      </div>
+
+      <div class="faq">
+        <h3>How were competitors scored?</h3>
+        <p>From their public engineering blogs, public docs, public pricing pages, and where applicable, hands-on testing. We do not score from secondary reporting. Where evidence is ambiguous, we mark <code>[UNCERTAIN]</code> in the per-product file and explain the gap.</p>
+      </div>
+
+      <div class="faq">
+        <h3>Is this a marketing page?</h3>
+        <p>Yes and no. It's a marketing page that earns the right to be one by publishing the methodology openly, scoring honestly, and accepting public contestation of every score.</p>
+        <p>Disagree with a score? <a href="https://github.com/TechIntegrationLabs/brain-skill-bundle/issues/new">File an issue</a>. We review weekly.</p>
+      </div>
+
+      <div class="faq">
+        <h3>Why these four dimensions and not others?</h3>
+        <p>They're the dimensions that distinguish a company-brain product from an enterprise-search product. They're what regulated buyers ask about within the first 30 minutes of a serious evaluation. They're not exhaustive — they're a deliberate frame.</p>
+      </div>
+
+      <div class="faq">
+        <h3>Will you add my product?</h3>
+        <p><a href="https://github.com/TechIntegrationLabs/brain-skill-bundle/issues/new">Open an issue</a> with the product name and a 1-paragraph architectural summary. We add new products quarterly. We score products that publicly position themselves as "company brain," "knowledge platform," or "AI knowledge layer." We don't score every memory library, vector DB, or workflow framework.</p>
+      </div>
+    </section>
+
+    <section class="footer-cta content">
+      <h2>What this benchmark is for</h2>
+      <p>Buyers: ask your AI vendors which dimensions they score on, and where. The vendor who can answer freshness/audience/portability/provenance with specifics is in a different category than the vendor who answers with adjectives.</p>
+      <p>Builders: if you're building in this space, the rubric tells you what serious buyers will ask in 2026. Build for those dimensions or be ready to lose evaluations to competitors who do.</p>
+      <p>Investors: this is the category Tom Blomfield called for in YC's Summer 2026 RFS. The differentiation is not "another company brain idea." It's a working, governed compiler between messy operational reality and reliable agent action.</p>
+
+      <div class="cta-row">
+        <a href="https://github.com/TechIntegrationLabs/brain-skill-bundle" class="cta primary">Methodology repo</a>
+        <a href="https://github.com/TechIntegrationLabs/brain-skill-bundle" class="cta secondary">brain-skill-bundle spec</a>
+        <a href="https://bizbrain.dev" class="cta secondary">Live BB1 demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>The Company Brain Benchmark · v2026.04 · MIT · <a href="https://github.com/TechIntegrationLabs/brain-skill-bundle">GitHub</a> · Authored by <a href="will@bizbrain-os.com">[name]</a></p>
+    <p class="micro">This page is the human-readable view of <a href="https://github.com/TechIntegrationLabs/brain-skill-bundle/blob/main/README.md">README.md</a>. The methodology is the repo. Disagreement → <a href="https://github.com/TechIntegrationLabs/brain-skill-bundle/issues/new">issue</a>.</p>
+  </footer>
+</body>
+</html>
